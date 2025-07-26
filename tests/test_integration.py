@@ -7,7 +7,7 @@ from app.crud.calculation import create_calculation, get_calculation
 
 
 # Use the same DB your Docker container runs (clean or throwaway data is fine for now)
-DATABASE_URL = "postgresql://postgres:postgres@localhost:5433/fastapi_db"
+DATABASE_URL = "postgresql://postgres:postgres@localhost:5432/fastapi_db"
 
 engine = create_engine(DATABASE_URL)
 TestingSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
